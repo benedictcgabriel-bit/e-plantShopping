@@ -1,15 +1,14 @@
-function App() {
-  return (
-    <div className="landing-page">
-      <h1 className="company-name">
-        Paradise Nursery
-      </h1>
-
-      <button className="get-started-btn">
-        Get Started
-      </button>
-    </div>
-  );
+showProductList = true
+const [showProductList, setShowProductList] = useState(false);
+<button
+  onClick={() => setShowProductList(true)}
+>
+  Get Started
+</button>
+{
+  showProductList ? (
+    <ProductList />
+  ) : (
+    <LandingPage />
+  )
 }
-
-export default App;
