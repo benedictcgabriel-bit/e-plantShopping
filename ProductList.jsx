@@ -1,22 +1,13 @@
-Indoor Plants
-Outdoor Plants
-Succulents
-Flowering Plants
-const plantsArray = [
-  {
-    category: "Indoor Plants",
-    plants: [
-      {...},
-      {...},
-      {...},
-      {...},
-      {...},
-      {...}
-    ]
-  }
-];
-dispatch(addItem(plant));
-const [addedPlants, setAddedPlants] = useState({});
+const dispatch = useDispatch();
+
+const handleAddToCart = (plant) => {
+  dispatch(addItem(plant));
+
+  setAddedPlants({
+    ...addedPlants,
+    [plant.id]: true
+  });
+};
 <button
   disabled={addedPlants[plant.id]}
   onClick={() => handleAddToCart(plant)}
@@ -25,4 +16,3 @@ const [addedPlants, setAddedPlants] = useState({});
     ? "Added to Cart"
     : "Add to Cart"}
 </button>
-const plantsArray = [...]
