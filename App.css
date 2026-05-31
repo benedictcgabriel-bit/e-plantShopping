@@ -1,1 +1,14 @@
+.landing-page {
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
 
+.company-name {
+  font-size: 3rem;
+}
+
+.get-started-btn {
+  padding: 10px 20px;
+}
